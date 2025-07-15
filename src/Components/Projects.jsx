@@ -2,8 +2,17 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 import kalrav_new from "../assets/AR/Kalrav Interior/New/Kalrav-Interior-new.png";
 import rteAssist from "../assets/AR/RTE Assist/Home_after_login.png";
 import rteAssist_All from "../assets/AR/RTE Assist/RTE Assist.png";
+import { useNavigate } from "react-router-dom";
+
 
 const Projects = () => {
+
+    const navigate = useNavigate();
+
+    const goToAbout = () => {
+        navigate("/projects");
+    };
+
     return (
         <div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-neutral-300 text-center underline" >Portfolio</h1>
@@ -36,7 +45,7 @@ const Projects = () => {
                 </div>
             </div>
 
-            <a className="flex text-lg items-center justify-center gap-2 border-2 border-neutral-500 w-fit px-10 py-2 mt-10 rounded-xl mx-auto hover:bg-neutral-500 text-neutral-200" href="#">Show More <ArrowRight /></a>
+            <a onClick={goToAbout} className="flex text-lg items-center justify-center gap-2 border-2 border-neutral-500 w-fit px-10 py-2 mt-10 rounded-xl mx-auto hover:bg-neutral-500 text-neutral-200" href="#">Show More <ArrowRight /></a>
 
         </div>
     )

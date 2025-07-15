@@ -30,11 +30,11 @@ import RK_Wedding from "../assets/AR/RK Wedding/Pages/page1.jpg";
 
 
 export const NavLinks = [
-    { href: "#", title: "Home" },
-    { href: "#about", title: "About" },
-    { href: "#projects", title: "Projects" },
-    { href: "#testimonials", title: "Testimonials" },
-    { href: "#contact", title: "Contact" },
+    { path: "/", name: "Home" },
+    { to: "#about", name: "About" },
+    { path: "/projects", name: "Projects" },
+    { to: "#testimonials", name: "Testimonials" },
+    { to: "#contact", name: "Contact" },
 ];
 
 export const icons = [

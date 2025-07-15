@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLinks } from "../Content/Data";
 import { Menu, X } from "lucide-react";
 
-const NavBar = ({navigate}) => {
+const NavBar = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const toggle = () => {
         setOpenMenu(!openMenu);
@@ -21,7 +21,7 @@ const NavBar = ({navigate}) => {
                 <ul className="hidden lg:flex justify-end items-center">
                     {NavLinks.map((item, index) => (
                         <li key={index} className="mx-10 hover:scale-110 transition-all duration-100">
-                            <a onClick={()=>navigate(item.title)} href={item.href} className="text-md text-neutral-400 hover:text-orange-500"  >{item.title}</a>
+                            <a href={item.path} className="text-md text-neutral-400 hover:text-orange-500"  >{item.name}</a>
                         </li>
                     ))}
                 </ul>
@@ -42,7 +42,7 @@ const NavBar = ({navigate}) => {
                     <ul className="space-y-5">
                         {NavLinks.map((item, index) => (
                             <li key={index} className="hover:scale-110 transition-all duration-100">
-                                <a onClick={toggle} className="px-10 text-md text-neutral-300 hover: hover:text-orange-500" href={item.href}>{item.title}</a>
+                                <a className="px-10 text-md text-neutral-300 hover: hover:text-orange-500" href={item.path}>{item.name}</a>
                             </li>
                         ))}
                     </ul>

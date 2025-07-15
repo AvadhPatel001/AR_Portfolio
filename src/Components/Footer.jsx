@@ -1,6 +1,6 @@
 import { NavLinks, icons } from "../Content/Data";
 
-const Footer = ( {navigate} ) => {
+const Footer = () => {
     return (
         <footer id="contact" className="bg-black py-5 mt-20">
 
@@ -13,7 +13,7 @@ const Footer = ( {navigate} ) => {
             <ul className="flex gap-5 sm:gap-10 lg:gap-15 justify-center items-center mt-5">
                 {NavLinks.map((item, index) => (
                     <li key={index} className="hover:scale-110 transition-all duration-100">
-                        <a onClick={()=>navigate(item.title)} className="text-md text-neutral-400 hover: hover:text-orange-500" href={item.href}>{item.title}</a>
+                        <a className="text-md text-neutral-400 hover: hover:text-orange-500" href={item.path}>{item.name}</a>
                     </li>
                 ))}
             </ul>
